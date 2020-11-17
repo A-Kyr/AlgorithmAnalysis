@@ -1,19 +1,19 @@
-import searching.BinarySearch;
-import sorting.Quicksort;
+import structures.BinaryNode;
 
 public class Driver {
     public static void main(String[] args) {
-        // array definition
-        // note: should add a file which contains a lot of arrays for testing
-        int[] A = {1, 4, 6, 2, 20, 4, 3, 9};
+        BinaryNode root = new BinaryNode(5);
+        root.add(3);
+        root.add(8);
+        root.add(1);
+        root.add(4);
+        root.add(6);
+        root.add(10);
+        root.add(7);
 
-        // test quicksort
-        Quicksort.refined(A, 5);
-        for (int number: A) {
-            System.out.println(number);
-        }
+        root.delete(5);
 
-        // test binary search
-        System.out.println(BinarySearch.search(A, 3));
+        System.out.println(root.getValue());
+
     }
 }
