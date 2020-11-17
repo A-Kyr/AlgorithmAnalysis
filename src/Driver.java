@@ -1,19 +1,21 @@
 import structures.BinaryNode;
+import structures.Hashing;
 
 public class Driver {
     public static void main(String[] args) {
-        BinaryNode root = new BinaryNode(5);
-        root.add(3);
-        root.add(8);
-        root.add(1);
-        root.add(4);
-        root.add(6);
-        root.add(10);
-        root.add(7);
+        Hashing A = new Hashing();
+        A.setHash(11);
+        A.insert(33);
+        A.insert(24);
+        A.insert(3);
+        A.insert(5);
+        A.insert(17);
+        A.insert(40);
+        A.insert(74);
+        A.insert(31);
+        A.insert(16);
 
-        root.delete(5);
-
-        System.out.println(root.getValue());
+        System.out.println(A.find(16));
 
     }
 }
